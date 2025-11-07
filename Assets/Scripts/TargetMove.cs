@@ -5,8 +5,10 @@ public class TargetMove : MonoBehaviour
     private float speed = 5;
 
     public float startPosX = 0;
+    public float startPosY = 0;
 
     public bool moveX = true;
+    public bool moveY = true;
     
     void Start()
     {
@@ -19,7 +21,12 @@ public class TargetMove : MonoBehaviour
         if(moveX == true)
         {
             transform.position = new Vector3(Mathf.Sin(Time.time * speed) * speed + startPosX, transform.position.y, transform.position.z);
-                
         }
+        else if(moveY == true)
+        {
+            
+        }
+        
+        
     }
 }
